@@ -77,7 +77,7 @@ Note that here, we overwrite our previous `sce` upon reassigning the results to 
 
 ```{r, message=FALSE}
 sce <- scran::computeSumFactors(sce)
-sce <- scater::normalize(sce)
+sce <- scater::logNormCounts(sce)
 ```
 
 Viewing the object again, we see that these functions added some new entries:
